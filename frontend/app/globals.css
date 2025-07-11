@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-background-primary via-background-secondary to-background-tertiary;
+    @apply min-h-screen;
+    @apply font-mario;
+  }
+}
+
+@layer components {
+  .mario-button {
+    @apply bg-gradient-to-b from-mario-red to-red-700;
+    @apply text-white font-bold py-3 px-6 rounded-lg;
+    @apply border-2 border-red-800;
+    @apply shadow-lg transform transition-all duration-150;
+    @apply hover:scale-105 hover:shadow-xl;
+    @apply active:scale-95;
+  }
+
+  .mario-button-secondary {
+    @apply bg-gradient-to-b from-mario-blue to-blue-700;
+    @apply text-white font-bold py-3 px-6 rounded-lg;
+    @apply border-2 border-blue-800;
+    @apply shadow-lg transform transition-all duration-150;
+    @apply hover:scale-105 hover:shadow-xl;
+    @apply active:scale-95;
+  }
+
+  .mario-button-success {
+    @apply bg-gradient-to-b from-mario-green to-green-700;
+    @apply text-white font-bold py-3 px-6 rounded-lg;
+    @apply border-2 border-green-800;
+    @apply shadow-lg transform transition-all duration-150;
+    @apply hover:scale-105 hover:shadow-xl;
+    @apply active:scale-95;
+  }
+
+  .mario-card {
+    @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl;
+    @apply border-4 border-mario-yellow;
+    @apply p-6 transform transition-all duration-200;
+    @apply hover:shadow-2xl hover:scale-102;
+  }
+
+  .mario-input {
+    @apply w-full px-4 py-3 rounded-lg;
+    @apply border-2 border-mario-yellow;
+    @apply focus:border-mario-orange focus:outline-none;
+    @apply bg-white/90 backdrop-blur-sm;
+    @apply font-mario text-gray-800;
+    @apply placeholder:text-gray-500;
+  }
+
+  .mario-textarea {
+    @apply w-full px-4 py-3 rounded-lg;
+    @apply border-2 border-mario-yellow;
+    @apply focus:border-mario-orange focus:outline-none;
+    @apply bg-white/90 backdrop-blur-sm;
+    @apply font-mario text-gray-800;
+    @apply placeholder:text-gray-500;
+    @apply resize-none;
+    @apply min-h-[120px];
+  }
+
+  .chat-message {
+    @apply p-4 rounded-lg shadow-md;
+    @apply border-2 border-transparent;
+    @apply transition-all duration-200;
+  }
+
+  .chat-message-user {
+    @apply bg-mario-blue/20 border-mario-blue;
+    @apply ml-auto max-w-[80%];
+  }
+
+  .chat-message-assistant {
+    @apply bg-mario-green/20 border-mario-green;
+    @apply mr-auto max-w-[80%];
+  }
+
+  .chat-message-developer {
+    @apply bg-mario-purple/20 border-mario-purple;
+    @apply mr-auto max-w-[80%];
+  }
+
+  .loading-dots {
+    @apply inline-flex space-x-1;
+  }
+
+  .loading-dot {
+    @apply w-2 h-2 bg-mario-red rounded-full animate-bounce;
+  }
+
+  .loading-dot:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .loading-dot:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+}
+
+@layer utilities {
+  .scale-102 {
+    transform: scale(1.02);
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .mario-gradient {
+    background: linear-gradient(135deg, #E60012, #FF8C00, #FFD700);
+  }
+
+  .mario-text-gradient {
+    background: linear-gradient(135deg, #E60012, #FF8C00, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+} 
