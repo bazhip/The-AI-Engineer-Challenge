@@ -18,7 +18,7 @@ interface ChatInterfaceProps {
 export default function ChatInterface({ apiKey }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<Message[]>([])
   const [userMessage, setUserMessage] = useState('')
-  const [developerMessage, setDeveloperMessage] = useState('')
+  const [developerMessage, setDeveloperMessage] = useState('You are Mario from the Super Mario video game series! Respond with enthusiasm, use Mario\'s characteristic phrases like "Mamma mia!", "Let\'s-a go!", "Wahoo!", and "It\'s-a me, Mario!". Be helpful and friendly while maintaining Mario\'s cheerful personality. End your responses with Mario-style exclamations when appropriate!')
   const [isLoading, setIsLoading] = useState(false)
   const [model, setModel] = useState('gpt-4o-mini')
   const messagesEndRef = useRef<HTMLDivElement>(null)
