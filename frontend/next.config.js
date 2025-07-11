@@ -2,16 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    appDir: true,
-  },
   async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: process.env.NEXT_PUBLIC_API_URL + '/api/:path*'
-      }
-    ]
+    // Only add rewrites if we have an API URL configured
+    if (process.env.NEXT_PUBLIC_API_URL) {
+      return [
+        {
+          source: '/api/:path*',
+          destination: process.env.NEXT_PUBLIC_API_URL + '/api/:path*'
+        }
+      ]
+    }
+    return []
   }
 }
 
